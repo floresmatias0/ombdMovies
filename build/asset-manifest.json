@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/ombdMovies/static/css/main.ea3b2cd0.chunk.css",
+    "main.js": "/ombdMovies/static/js/main.28f20eeb.chunk.js",
+    "main.js.map": "/ombdMovies/static/js/main.28f20eeb.chunk.js.map",
+    "runtime-main.js": "/ombdMovies/static/js/runtime-main.24bad802.js",
+    "runtime-main.js.map": "/ombdMovies/static/js/runtime-main.24bad802.js.map",
+    "static/js/2.6fdde6e9.chunk.js": "/ombdMovies/static/js/2.6fdde6e9.chunk.js",
+    "static/js/2.6fdde6e9.chunk.js.map": "/ombdMovies/static/js/2.6fdde6e9.chunk.js.map",
+    "index.html": "/ombdMovies/index.html",
+    "static/css/main.ea3b2cd0.chunk.css.map": "/ombdMovies/static/css/main.ea3b2cd0.chunk.css.map",
+    "static/js/2.6fdde6e9.chunk.js.LICENSE.txt": "/ombdMovies/static/js/2.6fdde6e9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.24bad802.js",
+    "static/js/2.6fdde6e9.chunk.js",
+    "static/css/main.ea3b2cd0.chunk.css",
+    "static/js/main.28f20eeb.chunk.js"
+  ]
+}
