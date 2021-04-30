@@ -1,0 +1,70 @@
+.container-cards{
+    width: 90%;
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-movie{
+    margin: 0.5em;
+    display: flex;
+    width: 18em;
+    background: transparent;
+    background-image: linear-gradient(-60deg, #ff585841 0%, #f0961973 100%);
+    border-radius: 0.5em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.content-movie{
+    padding: 0;
+    margin: 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.content-movie div{
+    width: 50%;
+}
+.content-movie p{
+    font-family: 'Lilita One', cursive;
+    font-size: 1.2rem;
+    margin-top: 0.1em;
+    margin-bottom: 0.3em;
+
+}
+.movie-title{
+    margin: 0.5em;
+    cursor: pointer;
+}
+.content-movie img{
+    width: 8em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+.content-movie a{
+    text-decoration: none;
+    color: rgb(121, 52, 52);
+}
+.fav-movie-icon-added{
+    display: none;
+}
+.fav-movie-icon{
+    display: flex;
+    justify-content: center;
+    margin: 0.5em;
+}
+.fav-movie-icon img{
+    width: 1.2em;
+    margin-left: 0.5em;
+    align-self: center;
+}
+.fav-movie-icon img:active{
+    transform: scale(0.9);
+}
