@@ -8,19 +8,62 @@
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    font-family: 'Lilita One', cursive;
+    font-size: 1.2rem;
 }
-
 .navbar nav {
     height: 100%;
 }
+.logoButton{
+    display: flex;
+    justify-content: center;
 
+}
+.btn-en, .btn-es{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1em;
+    height: 1.5em;
+    outline: none;
+    border: none;
+    border-radius: 0.5em;
+    font-family: 'Lilita One', cursive;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+}
+.swal-button {
+    border-radius: 0.5em;
+    background-color: aliceblue;
+    font-family: 'Lilita One', cursive;
+    color: black;
+    font-size: 1.2rem;
+    border: none !important;
+    outline: none !important;
+    box-shadow: 2px 2px 5px black !important;
+    font-weight: 0;
+    padding: 0.5em;
+}
+.swal-button:hover {
+    background-color: aliceblue !important;
+}
+.swal-modal {
+    background-color: #f096198a;
+    background-image: linear-gradient(-60deg, #ff585852 0%, #f0961959 100%) !important;
+    border-radius: 0.5em !important;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
 .list {
     margin: 0;
     padding: 0;
     list-style: none;
+    text-decoration: none;
     display: flex;
     flex-flow: row;
-    align-items: center;
+    align-self: center;
     height: 100%;
 }
 
@@ -29,18 +72,27 @@
     display: flex;
     height: 100%;
     width: auto;
-    align-items: center;
+    align-self: center;
 }
 
 .list-item a {
     color: white;
     height: 100%;
-    padding: 16px 10px;
+    padding: 16px 16px;
+    text-decoration: none;
     border-bottom: 4px solid transparent;
 }
 
-.list-item a:hover,
-.list-item a.active {
-    background-color: #808080;
+.list-item a:hover {
+    background-color: #626262;
     color: white;
+}
+
+.list-item a:focus{
+    background-color: #626262;
+}
+#logoHenry{
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 2em;
 }

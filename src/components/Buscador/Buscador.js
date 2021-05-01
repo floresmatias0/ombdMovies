@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import Card from './Card/Card'
 import { connect } from "react-redux";
-import './Buscador.css';
+import { withTranslation } from 'react-i18next';
 import {getMovies} from "../../actions"
+import loading from "../../img/loading.gif"
+import './Buscador.css';
+import swal from "sweetalert";
 export class Buscador extends Component {
   // Cuando usamos un componente de clase necesitamos un constructor y si o si llamar a super
   constructor(props) {
@@ -16,18 +19,25 @@ export class Buscador extends Component {
   }
   handleSubmit(event) {
     event.preventDefault(); //para que no se refresque la pagina
-    this.props.getMovies(this.state.title) // para que busque lo que se escribio en el buscador en la accion getmovies de la Api
+    if(!this.state.title){
+      swal({
+        text: 'This field can not be empty'
+      })
+    }else{
+      this.props.getMovies(this.state.title) // para que busque lo que se escribio en el buscador en la accion getmovies de la Api
+    }
   }
 
   render() {
     const { title } = this.state;
+    const {t} = this.props
     return (
       <div className='full-container'>
         <div className='div-search'>
-          <h1>Buscador</h1>
+          <h1>{t('finder')}</h1>
           <div className='div-container'>
             <form className="form-search" onSubmit={(e) => this.handleSubmit(e)}>
-              <label className="label" htmlFor="title">Película: </label>
+              <label className="label" htmlFor="title">{t('movie')}</label>
               <input
                 type="text"
                 className="input-search"
@@ -35,14 +45,16 @@ export class Buscador extends Component {
                 value={title}
                 onChange={(e) => this.handleChange(e)}
               />
-              <button className="button-search" type="submit">Buscar</button>
+              <button className="button-search" type="submit">{t('search')}</button>
             </form>
           </div>
         </div>
-        {this.props.movies && this.props.movies.length > 0?(
-          <Card/>
+        {this.props.loading ?(
+            <div>
+              <img className='loading-movie' src={loading} alt='loading...' />
+            </div>
         ):(
-        <p>realiza una busqueda para que aparezcan los resultados...</p>
+          <Card/>
         )}
       </div>
     );
@@ -52,7 +64,8 @@ export class Buscador extends Component {
 
 function mapStateToProps(state) {
   return {
-    movies: state.moviesLoaded
+    movies: state.moviesLoaded,
+    loading: state.moviesLoading
   };
 }
 
@@ -65,4 +78,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-  )(Buscador);
+  )(withTranslation()(Buscador));

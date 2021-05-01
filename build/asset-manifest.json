@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/home/static/css/main.ac12ab7a.chunk.css",
-    "main.js": "/home/static/js/main.04ed76e7.chunk.js",
-    "main.js.map": "/home/static/js/main.04ed76e7.chunk.js.map",
-    "runtime-main.js": "/home/static/js/runtime-main.6b8a76cc.js",
-    "runtime-main.js.map": "/home/static/js/runtime-main.6b8a76cc.js.map",
-    "static/js/2.4e542824.chunk.js": "/home/static/js/2.4e542824.chunk.js",
-    "static/js/2.4e542824.chunk.js.map": "/home/static/js/2.4e542824.chunk.js.map",
-    "index.html": "/home/index.html",
-    "static/css/main.ac12ab7a.chunk.css.map": "/home/static/css/main.ac12ab7a.chunk.css.map",
-    "static/js/2.4e542824.chunk.js.LICENSE.txt": "/home/static/js/2.4e542824.chunk.js.LICENSE.txt"
+    "main.css": "/ombdMovies/static/css/main.ecf889f8.chunk.css",
+    "main.js": "/ombdMovies/static/js/main.f8768e94.chunk.js",
+    "main.js.map": "/ombdMovies/static/js/main.f8768e94.chunk.js.map",
+    "runtime-main.js": "/ombdMovies/static/js/runtime-main.24bad802.js",
+    "runtime-main.js.map": "/ombdMovies/static/js/runtime-main.24bad802.js.map",
+    "static/js/2.29d076b8.chunk.js": "/ombdMovies/static/js/2.29d076b8.chunk.js",
+    "static/js/2.29d076b8.chunk.js.map": "/ombdMovies/static/js/2.29d076b8.chunk.js.map",
+    "index.html": "/ombdMovies/index.html",
+    "static/css/main.ecf889f8.chunk.css.map": "/ombdMovies/static/css/main.ecf889f8.chunk.css.map",
+    "static/js/2.29d076b8.chunk.js.LICENSE.txt": "/ombdMovies/static/js/2.29d076b8.chunk.js.LICENSE.txt",
+    "static/media/default.2979358b.png": "/ombdMovies/static/media/default.2979358b.png",
+    "static/media/loading.b536d94a.gif": "/ombdMovies/static/media/loading.b536d94a.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.6b8a76cc.js",
-    "static/js/2.4e542824.chunk.js",
-    "static/css/main.ac12ab7a.chunk.css",
-    "static/js/main.04ed76e7.chunk.js"
+    "static/js/runtime-main.24bad802.js",
+    "static/js/2.29d076b8.chunk.js",
+    "static/css/main.ecf889f8.chunk.css",
+    "static/js/main.f8768e94.chunk.js"
   ]
 }

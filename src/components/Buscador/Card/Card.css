@@ -37,17 +37,34 @@
     font-size: 1.2rem;
     margin-top: 0.1em;
     margin-bottom: 0.3em;
-
+    text-shadow: 1px 0.1px rgb(180, 50, 50);
+}
+.swal-text{
+    font-family: 'Lilita One', cursive;
+    font-size: 1.3rem;
+    margin-top: 0.1em;
+    margin-bottom: 0.3em;
+    text-shadow: 1px 0.1px rgb(180, 50, 50);
 }
 .movie-title{
     margin: 0.5em;
     cursor: pointer;
+    text-shadow: 1px 1px 1px black !important;
 }
-.content-movie img{
+.poster-movie{
     width: 8em;
+    height: 12em;
     border-radius: 0.5em;
     cursor: pointer;
 }
+.words-example{
+    font-family: 'Lilita One', cursive;
+    text-align: center;
+    font-size: 1.2rem;
+    color: aliceblue;
+    text-shadow: 2px 2px 5px black;
+}
+
 .content-movie a{
     text-decoration: none;
     color: rgb(121, 52, 52);
@@ -59,6 +76,7 @@
     display: flex;
     justify-content: center;
     margin: 0.5em;
+    cursor: pointer;
 }
 .fav-movie-icon img{
     width: 1.2em;

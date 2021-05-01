@@ -1,15 +1,26 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { NavLink } from 'react-router-dom';
-import './Favorites.css';
+import { withTranslation } from 'react-i18next';
 import {removeMovieFavorite} from "../../actions"
+import imgDefault from '../../img/default.png'
+import './Favorites.css';
+import swal from "sweetalert";
 
 export class ConnectedList extends Component {
-
+  handleErase(movie){
+    swal({
+      text: "Delete!!",
+    })
+    this.props.removeMovieFavorite(movie)
+  }
   render() {
+
+    const {t} = this.props;
+
     return (
       <div className='container-card-fav'>
-        <h2>Películas Favoritas</h2>
+        <h1>{t('title-fav')}</h1>
         <div className='container-cards-movie'>
           {this.props.movies.map((movie,key)=> {
             return (
@@ -19,9 +30,9 @@ export class ConnectedList extends Component {
                       <p>{movie.Title}</p>
                     </NavLink>
                     <NavLink to={`/movie/${movie.imdbID}`}>
-                      <img src={movie.Poster} alt='poster'/>
+                      <img src={movie.Poster === "N/A" ? imgDefault : movie.Poster} alt='poster'/>
                     </NavLink>
-                    <button onClick={() => this.props.removeMovieFavorite({id: movie.id})}>Remove</button>
+                    <button className='erase' onClick={() => this.handleErase({id: movie.id})}>{t('erase')}</button>
                   </ul> 
                 </div>
             ) 
@@ -47,5 +58,5 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-  )(ConnectedList);
+  )(withTranslation()(ConnectedList));
 

@@ -5,43 +5,40 @@ const initialState = {
     movies: [], //donde yo ponga todas mis peliculas favoritas
     moviesLoading: false,
     moviesLoaded: [], //las pelis buscadas en el buscador
-    movieDetail: {} // objeto con los detalles de la pelicula
+    movieDetail: {}, // objeto con los detalles de la pelicula
   };
 
   function rootReducer(state = initialState, action) {
    switch(action.type){
-     case "ADD_MOVIE_FAVORITE":
-      // let filter = state.movies.filter(movie => movie.id !== action.payload.id)
-       return {
-         //movies.push(action.payload)?? NOOOO!
-         ...state, // spread operator EMS6
-         movies: state.movies.concat(action.payload)
-         //movies: [...state.movies, action.payload] OTRA FORMA VALIDA!
-       };
-      case "GET_MOVIES_FAVORITE":
-        return {
-          ...state,
-          movies : action.payload
-        }
-    case "REMOVE_MOVIE_FAVORITE":
-      return {
-        ...state,
-        movies: state.movies.filter(movie => movie.id !== action.payload.id)
-      };
-      case "GET_MOVIES":
-        return {
-          ...state,
-          moviesLoaded: action.payload.Search
-        };
-      case "GET_MOVIES_LOADING":
-        return{
-          moviesLoading: true
-        };
-      case "GET_MOVIES_DETAIL":
-        return {
-          ...state,
-          movieDetail: action.payload
-        };
+        case "ADD_MOVIE_FAVORITE":
+          // let filter = state.movies.filter(movie => movie.id !== action.payload.id)
+          return {
+            //movies.push(action.payload)?? NOOOO!
+            ...state, // spread operator EMS6
+            movies: state.movies.concat(action.payload)
+            //movies: [...state.movies, action.payload] OTRA FORMA VALIDA!
+          };
+        case "REMOVE_MOVIE_FAVORITE":
+          return {
+            ...state,
+            movies: state.movies.filter(movie => movie.id !== action.payload.id)
+          };
+        case "GET_MOVIES":
+          return {
+            ...state,
+            moviesLoaded: action.payload.Search,
+            moviesLoading: false
+          };
+        case "GET_MOVIES_LOADING":
+          return{
+            ...state,
+            moviesLoading: true
+          };
+        case "GET_MOVIES_DETAIL":
+          return {
+            ...state,
+            movieDetail: action.payload,
+          };
         default:
           //NO OLVIDARSE DE ESCRIBIR EL DEFAULT
           //CASO CONTRARIO AL LEVANTAR LA APP NO VOY A TENER NINGUN ESTADO

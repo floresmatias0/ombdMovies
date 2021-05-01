@@ -1,16 +1,20 @@
 import React,{Component} from 'react' 
 import './Inicio.css'
+import '../../animations/animations.css'
+import { withTranslation } from 'react-i18next';
+
 
 export class Inicio extends Component{
-
     render(){
+        const { t } = this.props
+
         return (
-            <div className='container'>
+            <div className='container-inicio expandUp'>
                 <div className='container-words'>
-                    <p>This page is created by matias flores </p>
-                    <p>can search movies or series and video games info</p>
-                    <p>for start a search go to home in the header</p>
-                    <p>thanks for you visit  </p>   
+                    <p>{t('parrafo1')} </p>
+                    <p>{t('parrafo2')}</p>
+                    <p>{t('parrafo3')}</p>
+                    <p>{t('parrafo4')}</p>   
                 </div>
                 
             </div>
@@ -18,4 +22,4 @@ export class Inicio extends Component{
     }
 }
 
-export default Inicio;
+export default withTranslation()(Inicio);

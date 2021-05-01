@@ -1,21 +1,25 @@
 // actions creators
 // las acciones DESCRIBEN lo que va a suceder
+import swal from 'sweetalert'
 
 
 export function addMovieFavorite(payload) {
     return { type: "ADD_MOVIE_FAVORITE", payload };
   }
-
-export function getMoviesFavorite(){
-    return { type: "GET_MOVIES_FAVORITE" }
-}
   
   export function getMovies(titulo) {
     return function(dispatch) {
+      dispatch({ type: "GET_MOVIES_LOADING" })
       return fetch("https://www.omdbapi.com/?apikey=20dac387&s=" + titulo)
         .then(response => response.json())
         .then(json => {
-          dispatch({ type: "GET_MOVIES", payload: json });
+          if(!json.Search){
+            swal({
+              text:"sorry, the movie was not found, please try again"
+            })
+          }else{
+            dispatch({ type: "GET_MOVIES", payload: json });
+          }
         });
     };
   }

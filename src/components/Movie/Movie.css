@@ -1,30 +1,33 @@
-.movie-card {
-  font: 14px/22px "Lato", Arial, sans-serif;
-  color: #A9A8A3;
-  padding: 40px 0;
+.container-movie-detail{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
 }
-
+.movie-card-detail {
+  font-size: 1.2rem;
+  font-family:  'Lilita One', cursive;
+  display: flex;
+  justify-content: center;
+  width: 30em;
+}
 .container {
-  margin: 0 auto;
-  width: 700px;
-  height: 600px;
-  background: #4d4d4d;
-  border-radius: 5px;
-  position: relative;
+  display: flex;
+  flex-direction: column;  
+  background-color: transparent;
+  background-image: linear-gradient(-60deg, #ff585841 0%, #f0961973 100%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 1em;
 }
-
-
-
-.details {
-  padding: 50px 0 0 50px;
-}
-
 .title {
-    color: white;
-    font-size: 40px;
-    margin-bottom: 13px;
+  color: rgb(121, 52, 52);
+    font-size: 2.5rem;
     line-height: normal;
-    position: relative;
+    margin-top: 0.9em;
+    text-shadow: 1px 1px 1px black !important;
+}
+.details{
+  text-align: center;
 }
 .title span {
     margin-left: 12px;
@@ -43,20 +46,26 @@
   
 }
 .column {
-    padding-left: 41px;
-    padding-top: 30px;
-    margin-left: 20px;
-    width: 480px;
+    text-align: center;
+    margin-left: 2em;
+    margin-right: 2em;
+    text-shadow: 1px 0.1px rgb(180, 50, 50);
 }
 
 .img img {
-  width: 200px;
-  height: 210px;
-  padding-left: 50px;
+  width: 10em;
+  border-radius: 0.5em;
+}
+.container2 ul li{
+  text-shadow: 1px 0.1px rgb(180, 50, 50);
 }
 .container2 {
   display: flex;
   flex-direction: row;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding-bottom: 2em;
+
 }
 
 
