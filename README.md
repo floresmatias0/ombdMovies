@@ -1,5 +1,7 @@
 # Redux OMDB APP
 
+# DEMO [https://floresmatias0.github.io/ombdMovies/]
+
 En este ejercicio vamos a crear una APP que utilice la API de [OMDB](http://www.omdbapi.com/). Vamos a crear nuestra app utilizando __REACT__ y __REDUX__.
 
 > Vamos a necesitar una APIKEY ya que la API de OMDB es paga. Usen `apikey=20dac387`
